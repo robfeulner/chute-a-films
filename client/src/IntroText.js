@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import GlobalStyles from "./Global/GlobalStyles";
 
 const IntroText = () => {
   return (
     <Wrapper>
-      <H1>CHUTES à FILMS is a video store within a video store.</H1>
+      <H1Header>CHUTES à FILMS is a video store within a video store.</H1Header>
       <H2>
         Located inside Montréal’s only standing video rental store LA CINOCHE,
         Chute à films offers a monthly curated VHS selection from our personal
@@ -23,8 +24,9 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
-const H1 = styled.h1`
+const H1Header = styled.h1`
   font-size: 4em;
+  font-family: "Rubik Dirt", cursive;
 `;
 
 const H2 = styled.h2`

@@ -9,11 +9,9 @@ const App = () => {
       <BrowserRouter>
         <GlobalStyles />
         <Wrapper>
-          <div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
         </Wrapper>
       </BrowserRouter>
     </>

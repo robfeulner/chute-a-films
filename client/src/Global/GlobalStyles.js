@@ -2,24 +2,23 @@ import { createGlobalStyle } from "styled-components";
 import { COLORS } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Rubik+Dirt&family=Sirin+Stencil&display=swap');
 
-
-  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
 
 *{
         
-    font-family: 'Kumbh Sans', sans-serif;
+  
+  
+}
+h1{
+  
+  font-family: 'Rubik Dirt', sans-serif;
+  
+}
 
-        
-    }
-    h1, h2, h3{
-        
-
-
-    }
-
-    body{
+body{
+      font-family: 'Kumbh Sans', sans-serif;
         background-color: ${COLORS.yam};
         /* margin: 5% 5%; */
         
