@@ -30,6 +30,7 @@ const Wrapper = styled.div`
     order: 1;
   }
   ${IntroText} {
+    /* margin-top: 5%; */
     order: 2;
   }
 `;
