@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { isMobile } from "react-device-detect";
 import IntroText from "./IntroText";
 import Logo from "./Logo";
 import TMDB202307 from "./TMDB202307";
 import Map from "./Maps/Map";
+import Footer from "./Footer";
+import FooterMobile from "./FooterMobile";
 import GlobalStyles from "./Global/GlobalStyles";
 
 const Home = () => {
@@ -18,6 +21,7 @@ const Home = () => {
       <IntroText />
       <TMDB202307 />
       <Map location={location} zoomLevel={17} />
+      {isMobile ? <FooterMobile /> : <Footer />}
     </Wrapper>
   );
 };

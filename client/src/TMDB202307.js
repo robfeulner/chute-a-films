@@ -7,27 +7,47 @@ const TMDB202307 = () => {
 
   const movies = [
     {
-      category: "Blue Skies",
+      category: "We Live Inside a Dream",
       films: [
         {
-          movieId: "9894",
+          movieId: "10131",
           lang: "English",
         },
         {
-          movieId: "733516",
+          movieId: "97640",
+          lang: "Français",
+        },
+        {
+          movieId: "49343",
+        },
+      ],
+    },
+    {
+      category: "Defund the Police Procedural",
+      films: [
+        {
+          movieId: "31701",
+          lang: "English",
+        },
+        {
+          movieId: "12143",
+          lang: "Français",
+        },
+        {
+          movieId: "63460",
           lang: "Français",
         },
       ],
     },
     {
-      category: "Aliens",
+      category: "Bleu Nuit Video",
       films: [
         {
-          movieId: "9892",
+          movieId: "572011",
           lang: "English",
         },
         {
-          movieId: "9898",
+          movieId: "733516",
           lang: "Français",
         },
       ],
@@ -79,9 +99,10 @@ const TMDB202307 = () => {
 
   return (
     <Wrapper>
+      <H1Month>SEPTEMBER 2023 TITLES</H1Month>
       {moviesData.map((category) => (
         <div key={category.category}>
-          <H1>{category.category}</H1>
+          <H1 key={category.category}>{category.category}</H1>
           {category.films.map((film) => (
             <MovieBorder key={film.movieId}>
               <MovieDiv>
@@ -115,6 +136,7 @@ const backgroundTransitionTime = "1.5s"; // Adjust the transition time here (e.g
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @media only screen and (max-width: 768px) {
     /* For mobile */
@@ -125,13 +147,29 @@ const Wrapper = styled.div`
   }
 `;
 
-const H1 = styled.h1`
-  font-size: 5em;
+const H1Month = styled.h1`
+  font-size: 6em;
+  color: red;
   text-align: center;
+
   @media only screen and (max-width: 768px) {
     /* For mobile */
     font-size: 1.5em;
-    margin: 6% 0 16% 0;
+    text-align: center;
+    margin: auto;
+  }
+`;
+
+const H1 = styled.h1`
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 2%;
+  @media only screen and (max-width: 768px) {
+    /* For mobile */
+    font-size: 1em;
+    /* margin: 6% 0 16% 0; */
+    margin-bottom: 15%;
+    text-align: center;
   }
 `;
 
@@ -139,7 +177,9 @@ const H2 = styled.h2`
   font-size: 2.5em;
   @media only screen and (max-width: 768px) {
     /* For mobile */
-    font-size: 1em;
+    font-size: 0.75em;
+    margin-top: -1%;
+    margin-bottom: 0;
   }
 `;
 

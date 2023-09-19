@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const IntroText = () => {
   return (
@@ -7,9 +8,10 @@ const IntroText = () => {
       <H2>
         Located inside Montréal's only standing video rental store LA CINOCHE,
         Chute à films offers a monthly curated VHS selection from our personal
-        library. The selection changes every month, follow the Instagram page
-        for constant updates! And this is just dummy text please delete or
-        replace bye.
+        library. The selection changes every month,{" "}
+        <StyledLink to="http://instagram.com/chutesafilmes" target="_blank">
+          follow the Instagram page for constant updates!
+        </StyledLink>
       </H2>
     </Wrapper>
   );
@@ -24,7 +26,7 @@ const Wrapper = styled.div`
 
   @media only screen and (max-width: 768px) {
     /* For mobile */
-    margin: 0 7%;
+    margin: 4% 7% -4% 7%;
   }
 `;
 
@@ -44,9 +46,12 @@ const H2 = styled.h2`
   font-size: 3em;
   @media only screen and (max-width: 768px) {
     /* For mobile */
-    font-size: .7em;
-   
+    font-size: 0.7em;
   }
+`;
+
+const StyledLink = styled(Link)`
+  color: black;
 `;
 
 export default IntroText;
