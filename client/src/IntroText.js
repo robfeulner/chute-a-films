@@ -8,11 +8,13 @@ const IntroText = () => {
       <H2>
         Located inside Montréal's only standing video rental store LA CINOCHE,
         Chute à films offers a monthly curated VHS selection from our personal
-        library. The selection changes every month,{" "}
-        <StyledLink to="http://instagram.com/chutesafilmes" target="_blank">
-          follow the Instagram page for constant updates!
-        </StyledLink>
+        library. New retro titles appear every month.
       </H2>
+      {/* <H2>
+        <StyledLink to="http://instagram.com/chutesafilmes" target="_blank">
+          Follow the Instagram page for constant updates!
+        </StyledLink>
+      </H2> */}
     </Wrapper>
   );
 };

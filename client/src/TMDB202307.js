@@ -95,14 +95,14 @@ const TMDB202307 = () => {
     };
 
     fetchData();
-  }, [movies, apiKey]);
+  }, []);
 
   return (
     <Wrapper>
       <H1Month>SEPTEMBER 2023 TITLES</H1Month>
       {moviesData.map((category) => (
         <div key={category.category}>
-          <H1 key={category.category}>{category.category}</H1>
+          <H1Cat key={category.category}>{category.category}</H1Cat>
           {category.films.map((film) => (
             <MovieBorder key={film.movieId}>
               <MovieDiv>
@@ -136,13 +136,13 @@ const backgroundTransitionTime = "1.5s"; // Adjust the transition time here (e.g
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 
   @media only screen and (max-width: 768px) {
     /* For mobile */
     /* width: 50vw; */
-    align-items: flex-start;
-    margin-left: -6%;
+    /* align-items: flex-start; */
+    /* margin-left: -6%; */
     margin-top: -15%;
   }
 `;
@@ -154,13 +154,13 @@ const H1Month = styled.h1`
 
   @media only screen and (max-width: 768px) {
     /* For mobile */
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
     margin: auto;
   }
 `;
 
-const H1 = styled.h1`
+const H1Cat = styled.h1`
   font-size: 5em;
   text-align: center;
   margin-bottom: 2%;
@@ -168,7 +168,7 @@ const H1 = styled.h1`
     /* For mobile */
     font-size: 1em;
     /* margin: 6% 0 16% 0; */
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     text-align: center;
   }
 `;
@@ -196,7 +196,8 @@ const MovieBorder = styled.div`
 
   @media only screen and (max-width: 768px) {
     /* For mobile */
-    margin-bottom: 20%;
+    margin-bottom: 10%;
+    margin-left: -31%;
   }
 `;
 
